@@ -1,0 +1,25 @@
+To extract data from an LMS (Learning Management System) and update it in a Power BI dashboard via SharePoint, you can follow these steps:
+
+Extract Data from LMS:
+API Integration: Check if your LMS provides an API for data extraction. Most modern LMS platforms offer APIs to access data programmatically.
+Export Data: If API integration is not available, look for export options within the LMS to download data in formats like CSV, Excel, or JSON.
+Upload Data to SharePoint:
+Create a SharePoint List or Document Library: In SharePoint, create a list or document library to store the extracted data.
+Upload Data: Manually upload the exported data files to the SharePoint list or document library. If using an API, you can automate this step using Power Automate.
+Automate Data Upload with Power Automate:
+Create a Flow: In Power Automate, create a flow to automate the data upload process.
+Trigger: Set a trigger for the flow, such as a scheduled time or when a new file is added to a specific folder.
+Actions: Add actions to extract data from the LMS (using HTTP requests if using an API) and upload it to SharePoint.
+Connect SharePoint to Power BI:
+Get Data: In Power BI Desktop, go to Home > Get Data > More > Online Services > SharePoint Online List.
+Connect: Enter the URL of your SharePoint site and select the list or document library containing your data.
+Load Data: Load the data into Power BI and create your report or dashboard.
+Refresh Data in Power BI:
+Scheduled Refresh: Set up a scheduled refresh in the Power BI service to ensure your dashboard is updated with the latest data from SharePoint.
+Manual Refresh: You can also manually refresh the data in Power BI Desktop by clicking Refresh on the Home ribbon.
+Example Flow in Power Automate
+Trigger: Recurrence (e.g., daily at a specific time).
+Action: HTTP request to extract data from LMS API.
+Action: Create file in SharePoint document library.
+Action: Send an email notification (optional).
+This setup will ensure that your Power BI dashboard is always up-to-date with the latest data from your LMS, stored in SharePoint.
